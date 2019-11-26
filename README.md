@@ -1,5 +1,6 @@
-## Tracking Tomato Plant Growth and Disease
-Overview
+## Title: Tracking Tomato Plant Growth and Disease
+
+### Overview
 ```
 Our project uses edge detection methods and neural networks in order to create a web application
 that can let a user know how their plant is growing and diagnose it with any diseases

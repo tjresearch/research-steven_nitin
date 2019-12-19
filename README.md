@@ -12,7 +12,7 @@ that can let a user know how their plant is growing and diagnose it with any dis
 ### Running
 For the edge detection file
 ```
-python3 edge_detection.py -i <full filepath for the training image folder> -o <full filepath for the edge output folder> --minwidth <minimum width of each edge> --minheight <minimum height of each edge> -p <full filepath for the pickle output folder>
+python3 edge_detection.py -i <full filepath for the training image folder> -o <full filepath for the edge output folder> --minwidth 30 --minheight 30 -p <full filepath for the pickle output folder>
 ```
 For the growth detection file
 ```

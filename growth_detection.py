@@ -160,6 +160,7 @@ if __name__ == '__main__':
                 help="contour file")
     parser.add_argument("-f", "--folder", dest="folder",
                 help="folder of contour files")
+    parser.add_argument("-o", "--output", dest="output",                                                                                                                                                         help="folder of output files") 
 
     args = parser.parse_args()
 
@@ -185,7 +186,7 @@ if __name__ == '__main__':
     print(time_data)
     print(a_list)
     print(b_list)      
-    plot_best_fit("initial", [0, 6], "output.png")
+    plot_best_fit("initial", [0, 6], args.output+"output.png")
     regression()
     plt.clf()
-    plot_best_fit("trained", [0, 6], "output1.png")
+    plot_best_fit("trained", [0, 6], args.output+"output1.png")

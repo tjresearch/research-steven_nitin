@@ -21,3 +21,6 @@ python3 growth_detection.py -f <full filepath for the pickle output folder>
 
 ### Sample output
 - An example can be found at sampleOutput/AcGraph.png
+
+Credit to Github user @meijieru for the dehaze
+Credit to Github user @FienSoP for the canny_edge_detector

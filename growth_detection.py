@@ -128,7 +128,7 @@ def display():
 def get_param():
     return(w[0][0].item(), b[0].item())
 
-def plot_best_fit(title, range):
+def plot_best_fit(title, range, filename):
     plt.title = title
     w1, b1 = get_param()
     x1 = np.array(range)
@@ -137,6 +137,7 @@ def plot_best_fit(title, range):
     print(w1)
     print(b1)
     display()
+    plt.savefig(filename)
 
 def regression():
     epochs = 10000
@@ -184,6 +185,7 @@ if __name__ == '__main__':
     print(time_data)
     print(a_list)
     print(b_list)      
-    plot_best_fit("initial", [0, 6])
+    plot_best_fit("initial", [0, 6], "output.png")
     regression()
-    plot_best_fit("trained", [0, 6])
+    plt.clf()
+    plot_best_fit("trained", [0, 6], "output1.png")

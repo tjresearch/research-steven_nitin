@@ -137,7 +137,8 @@ def plot_best_fit(title, range, filename):
     print(w1)
     print(b1)
     display()
-    plt.savefig(filename)
+    plt.savefig(args.output+filename)
+    plt.savefig("static/output/"+filename)
 
 def regression():
     epochs = 10000
@@ -186,7 +187,7 @@ if __name__ == '__main__':
     print(time_data)
     print(a_list)
     print(b_list)      
-    plot_best_fit("initial", [0, 6], args.output+"output.png")
+    plot_best_fit("initial", [0, 6], "output.png")
     regression()
     plt.clf()
-    plot_best_fit("trained", [0, 6], args.output+"output1.png")
+    plot_best_fit("trained", [0, 6], "output1.png")

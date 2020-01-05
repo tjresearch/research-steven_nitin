@@ -1,10 +1,26 @@
 <!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type=text/javascript>
         $(function() {
-          $('a#test').bind('click', function() {
-            $.getJSON('/analysis',
+          $('a#cv1').bind('click', function() {
+            $.getJSON('/cv',
                 function(data) {
+                document.getElementById('cvdata').innerHTML = "Under Construction";
+              //do nothing
+            });
+            return false;
+          });
+        });
+</script>
+<script type=text/javascript>
+        $(function() {
+          $('a#nn1').bind('click', function() {
+            $.getJSON('/nn',
+                function(data) {
+                document.getElementById('cvdata').innerHTML = "Under Construction";
               //do nothing
             });
             return false;
@@ -13,12 +29,32 @@
 </script>
 
 
-//button
-<div class='container'>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Computer Systems</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div align = 'center'id = "customLabs">
     <h3>Test</h3>
         <form>
-            <a href=# id=test><button class='btn btn-default'>Test</button></a>
+	    <a href='/cv'class='but btn btn-lg btn-warning' role="button">Computer Vision</a> 
         </form>
+	<br>
+        <form>
+            <a href=# id =nn><button class='but btn btn-lg btn-dark'>Neural Net</button></a>
+        </form>
+	<img src="{{ image_src }}" alt="Growth Data">
 
 </div>
 </html>
